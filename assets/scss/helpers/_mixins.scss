@@ -21,7 +21,7 @@
 @mixin custom-scroll {
 	scrollbar-color: light;
 	scrollbar-width: thin;
-	scrollbar-color: var(--white) transparent;
+	scrollbar-color: var(--border-primary) transparent;
 
 	&::-webkit-scrollbar {
 		-webkit-appearance: none;
@@ -38,7 +38,7 @@
 		background-color: transparent;
 		min-width: 32px;
 		min-height: 32px;
-		border-radius: 5px;
+		border-radius: 50%;
 	}
 
 	&::-webkit-scrollbar-track {

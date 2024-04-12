@@ -22,9 +22,9 @@
     /* Needed for absolute positioning to work */
 
     .main-header {
-        bottom: 50px;
+        bottom: 5px;
         position: absolute;
-        font-family: Neue Montreal;
+        // font-family: Neue Montreal;
         font-size: 174px;
         font-weight: 400;
         line-height: 208.8px;
@@ -37,5 +37,13 @@
 
     .card {
         width: calc((100% - 80px)/2);
+
+        &:nth-child(odd) .card-img {
+            margin-bottom: 16px;
+        }
+
+        &:nth-child(even) .card-img {
+            margin-top: 16px;
+        }
     }
 }

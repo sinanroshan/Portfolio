@@ -1,7 +1,7 @@
 .custom-scroll {
   scrollbar-color: light;
   scrollbar-width: thin;
-  scrollbar-color: var(--white) transparent;
+  scrollbar-color: var(--border-primary) transparent;
 }
 .custom-scroll::-webkit-scrollbar {
   -webkit-appearance: none;
@@ -15,7 +15,7 @@
   background-color: transparent;
   min-width: 32px;
   min-height: 32px;
-  border-radius: 5px;
+  border-radius: 50%;
 }
 .custom-scroll::-webkit-scrollbar-track {
   background: transparent;
@@ -362,49 +362,49 @@ a:not([class]) {
 .font-body-xs {
   font-weight: 400;
   font-size: 0.75rem;
-  color: var(--black);
+  color: var(--white);
   line-height: 1.3;
 }
 
 .font-body-normal {
   font-weight: 400;
   font-size: 0.8125rem;
-  color: var(--black);
+  color: var(--white);
   line-height: 1.3;
 }
 
 .font-body-small {
   font-weight: 400;
   font-size: 0.875rem;
-  color: var(--black);
+  color: var(--white);
   line-height: 1.3;
 }
 
 .font-body-medium {
   font-weight: 500;
   font-size: 1rem;
-  color: var(--black);
+  color: var(--white);
   line-height: 1.3;
 }
 
 .font-title-xs {
   font-weight: 500;
   font-size: 1.125rem;
-  color: var(--black);
+  color: var(--white);
   line-height: 1.3;
 }
 
 .font-title-small {
   font-weight: 600;
-  font-size: 1.625rem;
-  color: var(--black);
+  font-size: 1.5rem;
+  color: var(--white);
   line-height: 1.3;
 }
 
 .font-title-medium {
   font-weight: 600;
-  font-size: 2.1875rem;
-  color: var(--black);
+  font-size: 2.125rem;
+  color: var(--white);
   line-height: 1.3;
 }
 
@@ -453,7 +453,7 @@ a:not([class]) {
 }
 
 .font-color-primary {
-  color: var(--black);
+  color: var(--white);
 }
 
 .font-color-secondary {
@@ -1367,9 +1367,8 @@ a:not([class]) {
   /* Needed for absolute positioning to work */
 }
 .landing-section .main-header {
-  bottom: 50px;
+  bottom: 5px;
   position: absolute;
-  font-family: Neue Montreal;
   font-size: 174px;
   font-weight: 400;
   line-height: 208.8px;
@@ -1381,4 +1380,10 @@ a:not([class]) {
 }
 .card-wrapper .card {
   width: calc((100% - 80px) / 2);
+}
+.card-wrapper .card:nth-child(odd) .card-img {
+  margin-bottom: 16px;
+}
+.card-wrapper .card:nth-child(even) .card-img {
+  margin-top: 16px;
 }/*# sourceMappingURL=main.css.map */
