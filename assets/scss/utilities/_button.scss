@@ -1,0 +1,38 @@
+.btn {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 1;
+	text-align: center;
+	vertical-align: middle;
+	padding: 10px 12px;
+	border: 1px solid transparent;
+	border-radius: $border-radius;
+	cursor: pointer;
+	user-select: none;
+	transition: all 0.3s ease-in-out;
+
+	&:disabled,
+	&.disabled,
+	&[aria-disabled='true'] {
+		cursor: default;
+	}
+
+	svg {
+		* {
+			transition: all .4s;
+		}
+	}
+
+	&-primary {
+		background-color: var(--primary-dark);
+
+		&:hover {
+			background-color: var(--Interactive-primary-hover);
+		}
+	}
+}

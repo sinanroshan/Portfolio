@@ -1,0 +1,42 @@
+// padding & margin reset values
+.ros-p-0 {
+  padding: 0 !important;
+}
+
+.ros-m-0 {
+  margin: 0 !important;
+}
+
+// This mixin generates CSS classes for padding and margin values
+@mixin spacing($className, $property, $values...) {
+  @each $value in $values {
+    .ros-#{$className}-#{$value} {
+      #{$property}: #{if($value == 0, 0, $value + 'px')} !important;
+    }
+  }
+}
+
+// Generate CSS classes for padding
+@include spacing('p', 'padding', 0, 2, 4, 8, 12, 16, 18, 20, 24, 28, 32, 36, 40, 80);
+@include spacing('pt', 'padding-top', 0, 2, 4, 8, 12, 16, 18, 20, 24, 28, 32, 36, 40, 80);
+@include spacing('pr', 'padding-right', 0, 2, 4, 8, 12, 16, 18, 20, 24, 28, 32, 36, 40, 80);
+@include spacing('pb', 'padding-bottom', 0, 2, 4, 8, 12, 16, 18, 20, 24, 28, 32, 36, 40, 80);
+@include spacing('pl', 'padding-left', 0, 2, 4, 8, 12, 16, 18, 20, 24, 28, 32, 36, 40, 80);
+
+// Generate CSS classes for margin
+@include spacing('m', 'margin', 0, 2, 4, 8, 12, 16, 18, 20, 24, 28, 32, 36, 40, 80);
+@include spacing('mt', 'margin-top', 0, 2, 4, 8, 12, 16, 18, 20, 24, 28, 32, 36, 40, 80);
+@include spacing('mr', 'margin-right', 0, 2, 4, 8, 12, 16, 18, 20, 24, 28, 32, 36, 40, 80);
+@include spacing('mb', 'margin-bottom', 0, 2, 4, 8, 12, 16, 18, 20, 24, 28, 32, 36, 40, 80);
+@include spacing('ml', 'margin-left', 0, 2, 4, 8, 12, 16, 18, 20, 24, 28, 32, 36, 40, 80);
+
+// Generate CSS classes for column gap
+@include spacing('column-gap', 'column-gap', 0, 4, 8, 12, 16, 80);
+
+// Generate CSS classes for row gap
+@include spacing('row-gap', 'row-gap', 0, 4, 8, 12, 16, 80);
+
+// Margin auto values
+.ros-m-auto {
+  margin: auto !important;
+}
