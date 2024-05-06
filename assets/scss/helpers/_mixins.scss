@@ -55,3 +55,41 @@
 .custom-scroll {
 	@include custom-scroll;
 }
+
+@mixin no-scroll-bar {
+	// scrollbar-color: ;
+	scrollbar-width: none;
+	scrollbar-color: transparent;
+
+	&::-webkit-scrollbar {
+		-webkit-appearance: none;
+		width: 0px;
+		height: 0px;
+	}
+
+	&::-webkit-scrollbar-button,
+	&::-webkit-scrollbar-corner {
+		display: none;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: transparent;
+		min-width: 0;
+		min-height: 0;
+		border-radius: 0;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	&:hover {
+		&::-webkit-scrollbar-thumb {
+			background-color: rgba(var(--white-rgb), .25);
+		}
+	}
+}
+
+.no-scroll-bar {
+	@include no-scroll-bar;
+}

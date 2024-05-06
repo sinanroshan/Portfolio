@@ -8,7 +8,8 @@
 }
 
 .section-wrapper {
-    height: 300px;
+    // height: 300px;
+    padding: 0 80px;
     width: 100%;
 }
 
@@ -24,26 +25,12 @@
     .main-header {
         bottom: 5px;
         position: absolute;
-        // font-family: Neue Montreal;
-        font-size: 174px;
-        font-weight: 400;
-        line-height: 208.8px;
-        text-align: left;
     }
 }
 
-.card-wrapper {
-    padding: 80px;
-
-    .card {
-        width: calc((100% - 80px)/2);
-
-        &:nth-child(odd) .card-img {
-            margin-bottom: 16px;
-        }
-
-        &:nth-child(even) .card-img {
-            margin-top: 16px;
-        }
-    }
+.slider {
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
 }

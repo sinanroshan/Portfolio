@@ -1,0 +1,19 @@
+.footer-content-container {
+    display: flex;
+
+    .sub-section {
+        width: 50%;
+    }
+
+    .footer-text {
+        font-size: 64px;
+        font-weight: 400;
+        line-height: 76.8px;
+        color: #FFFFFF;
+    }
+}
+
+.section-footer {
+    padding-bottom: 48px;
+    border-bottom: 1px solid #FFFFFF52;
+}

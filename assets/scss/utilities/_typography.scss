@@ -20,16 +20,30 @@
 
 .font-body-small {
   font-weight: 400;
-  font-size: rem(14);
+  font-size: rem(16);
   color: var(--white);
   line-height: 1.3;
 }
 
 .font-body-medium {
   font-weight: 500;
-  font-size: rem(16);
+  font-size: rem(24);
   color: var(--white);
   line-height: 1.3;
+}
+
+.font-body-large {
+  font-weight: 500;
+  font-size: rem(44);
+  color: var(--white);
+  line-height: 61.6px;
+}
+
+.font-body-x-large {
+  font-weight: 400;
+  font-size: rem(174);
+  color: var(--white);
+  // line-height: 208.8;
 }
 
 .font-title-xs {
