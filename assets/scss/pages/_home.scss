@@ -5,6 +5,10 @@
     max-width: 100vw;
     overflow-x: hidden;
     overflow-y: scroll;
+
+    &.bg-light {
+        background-color: var(--bg-secondary);
+    }
 }
 
 .section-wrapper {
