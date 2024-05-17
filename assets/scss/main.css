@@ -446,6 +446,13 @@ a:not([class]) {
   line-height: 1.3;
 }
 
+.font-title-large {
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: var(--white);
+  line-height: 1.3;
+}
+
 .text-uppercase {
   text-transform: uppercase;
 }
@@ -1455,8 +1462,13 @@ a:not([class]) {
   overflow-x: hidden;
   overflow-y: scroll;
 }
-.main-wrapper.bg-light {
+
+.bg-light {
   background-color: var(--bg-secondary);
+}
+
+.bg-dark {
+  background-color: var(--bg-primary);
 }
 
 .section-wrapper {
@@ -1483,4 +1495,15 @@ a:not([class]) {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
+}
+
+.experience-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 120px;
+  margin: 100px 80px;
+}
+.experience-wrapper .experience-detail-wrapper {
+  max-width: 60%;
 }/*# sourceMappingURL=main.css.map */
