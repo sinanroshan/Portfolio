@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* Use a more-intuitive box-sizing model. */
 *,
 *::before,
@@ -155,4 +157,47 @@ a:not([class]) {
 		transition-duration: 0.01ms !important;
 		scroll-behavior: auto !important;
 	}
+}
+
+
+@font-face {
+	font-family: "Neue Montreal Regular";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Neue Montreal Regular"), url("/assets/font/neue-montreal/NeueMontreal-Regular.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Neue Montreal Italic";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Neue Montreal Italic"), url("/assets/font/neue-montreal/NeueMontreal-Italic.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Neue Montreal Light";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Neue Montreal Light"), url("/assets/font/neue-montreal/NeueMontreal-Light.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Neue Montreal Light Italic";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Neue Montreal Light Italic"), url("/assets/font/neue-montreal/NeueMontreal-LightItalic.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Neue Montreal Bold";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Neue Montreal Bold"), url("/assets/font/neue-montreal/NeueMontreal-Bold.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Neue Montreal Bold Italic";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Neue Montreal Bold Italic"), url("/assets/font/neue-montreal/NeueMontreal-BoldItalic.otf") format("truetype");
 }
