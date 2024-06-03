@@ -31,14 +31,14 @@
     /* Needed for absolute positioning to work */
 
     .main-header {
-        bottom: 5px;
+        bottom: 130px;
         position: absolute;
+        opacity: .5;
     }
 }
 
-.slider {
-    width: 100%;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
+section {
+    &.slider-wrapper {
+        width: 100%;
+    }
 }

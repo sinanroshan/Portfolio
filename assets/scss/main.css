@@ -1451,19 +1451,22 @@ a:not([class]) {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3215686275);
 }
 
-.card-wrapper .card {
+.card-wrapper.card-col-3 .card {
+  width: calc((100% - 90px) / 3);
+}
+.card-wrapper.card-wrapper-home .card {
   width: calc((100% - 80px) / 2);
 }
-.card-wrapper .card:nth-child(odd) .card-img {
+.card-wrapper.card-wrapper-home .card:nth-child(odd) .card-img {
   margin-bottom: 16px;
 }
-.card-wrapper .card:nth-child(even) .card-img {
+.card-wrapper.card-wrapper-home .card:nth-child(even) .card-img {
   margin-top: 16px;
 }
-.card-wrapper .card:nth-child(odd) .card-video {
+.card-wrapper.card-wrapper-home .card:nth-child(odd) .card-video {
   margin-bottom: 16px;
 }
-.card-wrapper .card:nth-child(even) .card-video {
+.card-wrapper.card-wrapper-home .card:nth-child(even) .card-video {
   margin-top: 16px;
 }
 
@@ -1515,11 +1518,54 @@ a:not([class]) {
 }
 
 .badge {
-  padding: 10px;
+  padding: 10px 16px;
   border-radius: 50px;
   border: 1px solid #FFFFFF;
 }
 
+.slider {
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.slider-track-lr {
+  display: flex;
+  animation: scroll-lr 20s linear infinite;
+  animation-delay: -1ms;
+}
+
+.slider-track-rl {
+  display: flex;
+  animation: scroll-rl 20s linear infinite;
+  animation-delay: -1ms;
+}
+
+.slider-item {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.slider-card {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+@keyframes scroll-lr {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes scroll-rl {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .main-wrapper {
   background-color: var(--bg-primary);
   height: 100vh;
@@ -1552,15 +1598,13 @@ a:not([class]) {
   /* Needed for absolute positioning to work */
 }
 .landing-section .main-header {
-  bottom: 5px;
+  bottom: 130px;
   position: absolute;
+  opacity: 0.5;
 }
 
-.slider {
+section.slider-wrapper {
   width: 100%;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
 }
 
 .experience-wrapper {

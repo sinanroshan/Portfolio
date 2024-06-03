@@ -1,21 +1,30 @@
 .card-wrapper {
-    .card {
-        width: calc((100% - 80px)/2);
 
-        &:nth-child(odd) .card-img {
-            margin-bottom: 16px;
+    &.card-col-3 {
+        .card {
+            width: calc((100% - 90px)/3);
         }
+    }
 
-        &:nth-child(even) .card-img {
-            margin-top: 16px;
-        }
+    &.card-wrapper-home {
+        .card {
+            width: calc((100% - 80px)/2);
 
-        &:nth-child(odd) .card-video {
-            margin-bottom: 16px;
-        }
+            &:nth-child(odd) .card-img {
+                margin-bottom: 16px;
+            }
 
-        &:nth-child(even) .card-video {
-            margin-top: 16px;
+            &:nth-child(even) .card-img {
+                margin-top: 16px;
+            }
+
+            &:nth-child(odd) .card-video {
+                margin-bottom: 16px;
+            }
+
+            &:nth-child(even) .card-video {
+                margin-top: 16px;
+            }
         }
     }
 }
