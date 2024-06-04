@@ -25,6 +25,11 @@
             &:nth-child(even) .card-video {
                 margin-top: 16px;
             }
+
+            .card-img,
+            .card-video {
+                border-radius: 12px;
+            }
         }
     }
 }

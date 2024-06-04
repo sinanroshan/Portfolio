@@ -1469,6 +1469,10 @@ a:not([class]) {
 .card-wrapper.card-wrapper-home .card:nth-child(even) .card-video {
   margin-top: 16px;
 }
+.card-wrapper.card-wrapper-home .card .card-img,
+.card-wrapper.card-wrapper-home .card .card-video {
+  border-radius: 12px;
+}
 
 .card-content {
   position: relative;
@@ -1567,6 +1571,40 @@ a:not([class]) {
     transform: translateX(0);
   }
 }
+.nav-tab-container {
+  position: fixed;
+  top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+}
+
+.nav-item-wrapper {
+  background-color: var(--white);
+  border-radius: 100px;
+  padding: 8px 16px;
+  display: flex;
+  list-style: none;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+.nav-item-wrapper .nav-item {
+  padding: 10px 16px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+.nav-item-wrapper .nav-item.active, .nav-item-wrapper .nav-item:hover {
+  background-color: var(--black);
+}
+.nav-item-wrapper .nav-item.active .nav-item-link, .nav-item-wrapper .nav-item:hover .nav-item-link {
+  color: var(--white);
+}
+.nav-item-wrapper .nav-item .nav-item-link {
+  color: gray;
+  text-decoration: none;
+}
+
 .main-wrapper {
   background-color: var(--bg-primary);
   height: 100vh;
@@ -1612,7 +1650,7 @@ a:not([class]) {
   -o-object-fit: cover;
      object-fit: cover;
   opacity: 0;
-  transition: all 0.4s;
+  transition: all 0.9s;
 }
 .landing-section .landing-bg-video:hover {
   opacity: 1;
