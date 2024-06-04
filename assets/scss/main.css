@@ -1596,6 +1596,7 @@ a:not([class]) {
 }
 .nav-item-wrapper .nav-item.active, .nav-item-wrapper .nav-item:hover {
   background-color: var(--black);
+  transition: all 0.6s;
 }
 .nav-item-wrapper .nav-item.active .nav-item-link, .nav-item-wrapper .nav-item:hover .nav-item-link {
   color: var(--white);

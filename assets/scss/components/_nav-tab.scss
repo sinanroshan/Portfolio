@@ -25,6 +25,7 @@
         &.active,
         &:hover {
             background-color: var(--black);
+            transition: all 0.6s;
 
             .nav-item-link {
                 color: var(--white);
