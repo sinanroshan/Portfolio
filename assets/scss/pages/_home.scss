@@ -22,19 +22,40 @@
 }
 
 .landing-section {
-    background-image: url('/assets/images/landing-image.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right top;
-    height: 120vh;
+    // background-image: url('/assets/images/landing-image.png');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: right top;
+    height: 100vh;
     position: relative;
-    /* Needed for absolute positioning to work */
 
     .main-header {
-        bottom: 130px;
+        bottom: 10px;
         position: absolute;
-        opacity: .5;
     }
+
+    .landing-bg-img {
+        object-fit: cover;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .landing-bg-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: all 0.4s;
+
+        &:hover {
+            opacity: 1;
+            transition: all 0.9s;
+        }
+    }
+
 }
 
 section {

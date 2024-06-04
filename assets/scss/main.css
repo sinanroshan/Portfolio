@@ -1521,6 +1521,7 @@ a:not([class]) {
   padding: 10px 16px;
   border-radius: 50px;
   border: 1px solid #FFFFFF;
+  font-size: 0.8125rem;
 }
 
 .slider {
@@ -1530,7 +1531,7 @@ a:not([class]) {
 
 .slider-track-lr {
   display: flex;
-  animation: scroll-lr 20s linear infinite;
+  animation: scroll-lr 40s linear infinite;
   animation-delay: -1ms;
 }
 
@@ -1589,18 +1590,33 @@ a:not([class]) {
 }
 
 .landing-section {
-  background-image: url("/assets/images/landing-image.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right top;
-  height: 120vh;
+  height: 100vh;
   position: relative;
-  /* Needed for absolute positioning to work */
 }
 .landing-section .main-header {
-  bottom: 130px;
+  bottom: 10px;
   position: absolute;
-  opacity: 0.5;
+}
+.landing-section .landing-bg-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+}
+.landing-section .landing-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0;
+  transition: all 0.4s;
+}
+.landing-section .landing-bg-video:hover {
+  opacity: 1;
+  transition: all 0.9s;
 }
 
 section.slider-wrapper {
