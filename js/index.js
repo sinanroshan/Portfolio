@@ -4,36 +4,30 @@ $(document).ready(function () {
   const sliderCard2 = document.getElementById("cardSlider2");
   const sliderDetail = document.getElementById("slider-detail");
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        startScroll(entry);
-      }
-    });
-  });
-
-  observer.observe(HomeSlider);
-  observer.observe(sliderCard1);
-  observer.observe(sliderCard2);
-  observer.observe(sliderDetail);
+  startScroll(HomeSlider);
+  startScroll(sliderCard1);
+  startScroll(sliderCard2);
+  startScroll(sliderDetail);
 });
 
 function startScroll(sliderItem) {
-  if (!sliderItem.target.children[0]) {
+  if (!sliderItem.children[0]) {
     return;
   }
-  const sliderContent = sliderItem.target.children[0].firstElementChild;
+  const sliderContent = sliderItem.children[0].firstElementChild;
+  var speed = sliderItem.children[0].attributes["speed"].value;
+  var dir = sliderItem.children[0].attributes["dir"].value;
 
-  sliderItem.target.children[0].appendChild(sliderContent.cloneNode(true));
+  sliderItem.children[0].appendChild(sliderContent.cloneNode(true));
 
   const totalWidth = sliderContent.offsetWidth;
 
   // Set the width of the marquee container
-  gsap.set(sliderItem.target.children[0], { width: totalWidth * 1.5 });
+  gsap.set(sliderItem.children[0], { width: totalWidth * 1.5 });
 
-  gsap.to(sliderItem.target.children[0], {
-    x: -totalWidth - 20,
-    duration: 40,
+  gsap.to(sliderItem.children[0], {
+    x: dir == "ltr" ? -totalWidth - 20 : totalWidth - 20,
+    duration: speed,
     ease: "linear",
     repeat: -2,
   });
