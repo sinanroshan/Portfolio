@@ -1528,21 +1528,17 @@ a:not([class]) {
   font-size: 0.8125rem;
 }
 
-.slider {
+.slider-wrapper {
+  display: flex;
+  align-items: center;
   overflow: hidden;
-  background-color: transparent;
+  position: relative;
 }
 
-.slider-track-lr {
+.slider {
   display: flex;
-  animation: scroll-lr 40s linear infinite;
-  animation-delay: -1ms;
-}
-
-.slider-track-rl {
-  display: flex;
-  animation: scroll-rl 20s linear infinite;
-  animation-delay: -1ms;
+  white-space: nowrap;
+  position: relative;
 }
 
 .slider-item {
@@ -1555,22 +1551,6 @@ a:not([class]) {
   text-align: center;
 }
 
-@keyframes scroll-lr {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-@keyframes scroll-rl {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 .nav-tab-container {
   position: fixed;
   top: 30px;

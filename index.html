@@ -15,9 +15,17 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="assets/scss/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+
+    <script src="/assets/js/jquery/jquery.min.js"></script>
+
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 
     <script type="text/javascript" src="/js/index.js"></script>
-
+    <!-- <script type="text/javascript" src="/assets/js/custom/slider.js"></script> -->
+    <!-- <script type="text/javascript" src="/js/slider.js"></script> -->
 </head>
 
 <body class="custom-scroll">
@@ -43,15 +51,14 @@
                 <video class="landing-bg-video" src="assets/video/homepage/landing-loop.mp4" muted autoplay loop
                     preload="auto"></video>
             </div>
-            <div class="slider main-header">
-                <div class="slider-track-lr" id="sliderTrack">
-                    <span class="slider-item font-body-x-large ros-pl-20">Arshad TP</span>
-                    <!-- <span class="slider-item font-body-x-large ros-pl-20">Motion Designer</span>
-                    <span class="slider-item font-body-x-large ros-pl-20">Graphic Designer</span>
-                    <span class="slider-item font-body-x-large ros-pl-20">3D Designer</span> -->
-                    <span class="slider-item font-body-x-large ros-pl-20">Arshad TP</span>
-                    <span class="slider-item font-body-x-large ros-pl-20">Arshad TP</span>
-                    <span class="slider-item font-body-x-large ros-pl-20">Arshad TP</span>
+            <div class="slider-wrapper main-header" id="slider-home">
+                <div class="slider" name="Slider Landing" speed="10" dir="ltr">
+                    <div class="slider-track-rl">
+                        <span class="slider-item font-body-x-large ros-pl-20">Arshad TP</span>
+                        <span class="slider-item font-body-x-large ros-pl-20">Arshad TP</span>
+                        <span class="slider-item font-body-x-large ros-pl-20">Arshad TP</span>
+                        <span class="slider-item font-body-x-large ros-pl-20">Arshad TP</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -61,7 +68,7 @@
                 <div class="card">
                     <div class="card-content">
                         <img class="card-img" src="/assets/images/card-1.png">
-                        <video src="assets/video/card-video-1.mp4" muted playsinline autoplay loop preload="auto"
+                        <video src="assets/video/homepage/1.mp4" muted playsinline autoplay loop preload="auto"
                             class="card-video"></video>
                     </div>
                     <div class="card-description">
@@ -82,10 +89,18 @@
                             <div class="badge">Premier Pro</div>
                         </div>
                     </div>
-                    <img class="card-img" src="/assets/images/card-2.png">
+                    <div class="card-content">
+                        <img class="card-img" src="/assets/images/card-1.png">
+                        <video src="assets/video/homepage/2.mp4" muted playsinline autoplay loop preload="auto"
+                            class="card-video"></video>
+                    </div>
                 </div>
                 <div class="card">
-                    <img class="card-img" src="/assets/images/card-1.png">
+                    <div class="card-content">
+                        <img class="card-img" src="/assets/images/card-1.png">
+                        <video src="assets/video/homepage/3.mp4" muted playsinline autoplay loop preload="auto"
+                            class="card-video"></video>
+                    </div>
                     <div class="card-description">
                         <div class="font-title-medium font-weight-500">Torem ipsum</div>
                         <div class="d-flex ros-column-gap-16 ros-mt-12">
@@ -104,7 +119,11 @@
                             <div class="badge">Premier Pro</div>
                         </div>
                     </div>
-                    <img class="card-img" src="/assets/images/card-2.png">
+                    <div class="card-content">
+                        <img class="card-img" src="/assets/images/card-1.png">
+                        <video src="assets/video/homepage/4.mp4" muted playsinline autoplay loop preload="auto"
+                            class="card-video"></video>
+                    </div>
                 </div>
             </div>
             <div class="d-flex justify-content-center ros-mt-80 ros-mb-80">
@@ -118,10 +137,28 @@
                 dedication to pushing creative boundaries, I strive to deliver impactful and memorable storytelling
                 through the art of motion design.</p>
         </section>
-        <section class="slider-wrapper">
+        <div class="slider-wrapper" id="cardSlider1">
+            <div class="slider" name="Card slider" speed="10" dir="ltr">
+                <div class="slider-track-rl d-flex">
+                    <div class="slider-item slider-card">
+                        <img class="card-img" src="/assets/images/card-1.png">
+                    </div>
+                    <div class="slider-item slider-card">
+                        <img class="card-img" src="/assets/images/card-2.png">
+                    </div>
+                    <div class="slider-item slider-card">
+                        <img class="card-img" src="/assets/images/card-1.png">
+                    </div>
+                    <div class="slider-item slider-card">
+                        <img class="card-img" src="/assets/images/card-2.png">
+                    </div>
+                </div>
 
-            <div class="slider">
-                <div class="slider-track-rl" id="cardSlider1">
+            </div>
+        </div>
+        <div class="slider-wrapper ros-mt-20" id="cardSlider2">
+            <div class="slider" name="Card slider" speed="10" dir="rtl">
+                <div class="slider-track-rl d-flex">
                     <div class="slider-item slider-card">
                         <img class="card-img" src="/assets/images/card-1.png">
                     </div>
@@ -135,34 +172,21 @@
                         <img class="card-img" src="/assets/images/card-2.png">
                     </div>
                 </div>
-            </div>
-            <div class="slider ros-mt-20">
-                <div class="slider-track-lr" id="cardSlider2">
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/card-1.png">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/card-2.png">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/card-1.png">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/card-2.png">
-                    </div>
-                </div>
-            </div>
 
-            <div class="slider">
-                <div class="slider-track-lr" id="sliderTrack">
+            </div>
+        </div>
+
+        <div class="slider-wrapper" id="slider-detail">
+            <div class="slider" name="Details slider" speed="10" dir="ltr">
+                <div class="slider-track-rl">
                     <span class="slider-item font-body-x-large ros-pl-20">Arshad TP</span>
-                    <span class="slider-item font-body-x-large ros-pl-20">Motion Designer</span>
-                    <span class="slider-item font-body-x-large ros-pl-20">Graphic Designer</span>
-                    <span class="slider-item font-body-x-large ros-pl-20">3D Designer</span>
+                    <span class="slider-item font-body-x-large ros-pl-20">Arshad TP</span>
+                    <span class="slider-item font-body-x-large ros-pl-20">Arshad TP</span>
                     <span class="slider-item font-body-x-large ros-pl-20">Arshad TP</span>
                 </div>
             </div>
-        </section>
+        </div>
+
         <!-- footer -->
         <section class="section-wrapper section-footer ros-pt-80">
             <diV class="footer-content-container">
