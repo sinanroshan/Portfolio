@@ -1505,6 +1505,18 @@ a:not([class]) {
   border-radius: 100px;
 }
 
+.slider-track .slider-card .card-img {
+  min-height: 500px;
+  max-height: 500px;
+  min-width: 400px;
+  max-width: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.slider-track .slider-card + .slider-card {
+  margin-left: 16px;
+}
+
 .border-btn {
   background-color: transparent;
   border: 1px solid #EFEFEF;
