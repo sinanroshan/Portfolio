@@ -6,6 +6,8 @@
 }
 
 
+
+
 .slider {
     display: flex;
     white-space: nowrap;
@@ -15,6 +17,22 @@
 .slider-item {
     flex: 0 0 auto;
     text-align: center;
+
+    &.serration {
+        &::after {
+            content: "";
+            display: inline-flex;
+            background-image: url(/assets/images/GifFiles/diamond.gif);
+            background-position: center;
+            background-repeat: repeat;
+            width: 244px;
+            height: 221px;
+            margin-left: 32px;
+            scale: .5;
+            position: relative;
+            bottom: -45px;
+        }
+    }
 }
 
 .slider-card {
