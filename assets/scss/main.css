@@ -1472,6 +1472,10 @@ a:not([class]) {
 .card-wrapper.card-wrapper-home .card .card-img,
 .card-wrapper.card-wrapper-home .card .card-video {
   border-radius: 12px;
+  min-height: 360px;
+  max-height: 360px;
+  min-width: 650px;
+  max-width: 650px;
 }
 
 .card-content {

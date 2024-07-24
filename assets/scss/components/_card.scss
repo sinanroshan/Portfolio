@@ -29,6 +29,10 @@
             .card-img,
             .card-video {
                 border-radius: 12px;
+                min-height: 360px;
+                max-height: 360px;
+                min-width: 650px;
+                max-width: 650px;
             }
         }
     }
