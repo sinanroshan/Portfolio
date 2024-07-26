@@ -7,13 +7,14 @@
     <title>Arshad TP</title>
     <meta name="theme-color" content="#070707">
 
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="assets/scss/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 
@@ -23,6 +24,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 
+    <script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="/js/index.js"></script>
     <!-- <script type="text/javascript" src="/assets/js/custom/slider.js"></script> -->
     <!-- <script type="text/javascript" src="/js/slider.js"></script> -->
@@ -52,7 +54,7 @@
                     preload="auto"></video>
             </div>
             <div class="slider-wrapper main-header" id="slider-home">
-                <div class="slider" name="Slider Landing" speed="30" dir="ltr">
+                <div class="slider" name="Slider Landing" speed="30" dir="rtl">
                     <div class="slider-track">
                         <span class="slider-item font-body-x-large ros-pl-32 serration">Arshad TP</span>
                         <span class="slider-item font-body-x-large ros-pl-32 serration">Arshad TP</span>
@@ -137,146 +139,138 @@
                 dedication to pushing creative boundaries, I strive to deliver impactful and memorable storytelling
                 through the art of motion design.</p>
         </section>
-        <div class="slider-wrapper" id="cardSlider1">
-            <div class="slider" name="Card slider" speed="40" dir="ltr">
-                <div class="slider-track d-inline-flex">
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/Bottle 1.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/Bottle 2.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/Bottle 3.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/Bottle 4.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 1.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 2.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 3.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 4.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 5.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 6.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 7.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 8.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 9.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 10.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 11.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 12.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 13.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 15.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 16.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 17.jpg">
-                    </div>
-                </div>
+        <div class="owl-carousel owl-card-slider" id="cardSlider1" dir="ltr">
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/Bottle 1.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/Bottle 2.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/Bottle 3.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/Bottle 4.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 1.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 2.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 3.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 4.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 5.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 6.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 7.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 8.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 9.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 10.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 11.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 12.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 13.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 15.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 16.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 17.jpg">
             </div>
         </div>
-        <div class="slider-wrapper ros-mt-20" id="cardSlider2">
-            <div class="slider" name="Details slider" speed="40" dir="rtl">
-                <div class="slider-track d-inline-flex">
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/Bottle 1.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/Bottle 2.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/Bottle 3.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/Bottle 4.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 1.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 2.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 3.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 4.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 5.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 6.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 7.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 8.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 9.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 10.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 11.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 12.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 13.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 15.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 16.jpg">
-                    </div>
-                    <div class="slider-item slider-card">
-                        <img class="card-img" src="/assets/images/slider-cards/dig art 17.jpg">
-                    </div>
-                </div>
+        <div class="owl-carousel owl-card-slider" id="cardSlider2" dir="rtl">
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/Bottle 1.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/Bottle 2.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/Bottle 3.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/Bottle 4.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 1.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 2.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 3.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 4.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 5.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 6.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 7.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 8.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 9.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 10.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 11.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 12.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 13.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 15.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 16.jpg">
+            </div>
+            <div class="slider-card">
+                <img class="card-img" src="/assets/images/slider-cards/dig art 17.jpg">
             </div>
         </div>
 
         <div class="slider-wrapper" id="slider-detail">
             <div class="slider" name="Details slider" speed="30" dir="ltr">
                 <div class="slider-track">
-                    <span class="slider-item font-body-x-large ros-pl-32 serration">Arshad TP</span>
-                    <span class="slider-item font-body-x-large ros-pl-32 serration">Arshad TP</span>
-                    <span class="slider-item font-body-x-large ros-pl-32 serration">Arshad TP</span>
-                    <span class="slider-item font-body-x-large ros-pl-32 serration">Arshad TP</span>
+                    <span class="slider-item font-body-x-large ros-pl-32 serration">2D/3D Motion Designer</span>
+                    <span class="slider-item font-body-x-large ros-pl-32 serration">Graphic Design</span>
+                    <span class="slider-item font-body-x-large ros-pl-32 serration">Digital Art</span>
+                    <span class="slider-item font-body-x-large ros-pl-32 serration">Concept Art</span>
                 </div>
             </div>
         </div>

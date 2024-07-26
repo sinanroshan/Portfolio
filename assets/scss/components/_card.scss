@@ -67,19 +67,3 @@
     padding: 12px 24px;
     border-radius: 100px;
 }
-
-.slider-track {
-    .slider-card {
-        .card-img {
-            min-height: 500px;
-            max-height: 500px;
-            min-width: 400px;
-            max-width: 400px;
-            object-fit: cover;
-        }
-
-        +.slider-card {
-            margin-left: 16px;
-        }
-    }
-}
