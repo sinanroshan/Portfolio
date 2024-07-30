@@ -14,7 +14,7 @@ $(document).ready(function () {
     autoplay: true,
     autoplayTimeout: 2000,
     smartSpeed: 5000,
-    autoplayHoverPause: true,
+    autoplayHoverPause: false,
     dragEndSpeed: 500,
   });
   $("#cardSlider2").owlCarousel({
@@ -24,7 +24,7 @@ $(document).ready(function () {
     autoplay: true,
     autoplayTimeout: 2000,
     smartSpeed: 5000,
-    autoplayHoverPause: true,
+    autoplayHoverPause: false,
     dragEndSpeed: 500,
     rtl: true,
   });
