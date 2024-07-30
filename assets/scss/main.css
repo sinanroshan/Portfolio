@@ -1549,7 +1549,7 @@ a:not([class]) {
   flex: 0 0 auto;
   text-align: center;
 }
-.slider-item.serration::after {
+.slider-item.seprration::after {
   content: "";
   display: inline-flex;
   background-image: url(/assets/images/GifFiles/diamond.gif);
@@ -1574,7 +1574,6 @@ a:not([class]) {
 .owl-carousel .owl-item {
   width: 360px !important;
   height: 500px !important;
-  /* Force fixed width */
 }
 .owl-carousel.owl-card-slider {
   gap: 10px;

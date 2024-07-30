@@ -15,7 +15,7 @@
     flex: 0 0 auto;
     text-align: center;
 
-    &.serration {
+    &.seprration {
         &::after {
             content: "";
             display: inline-flex;
@@ -36,8 +36,6 @@
 // owl
 .owl-carousel {
     .owl-stage-outer {
-        // display: flex;
-        // justify-content: center;
         overflow: hidden;
         position: relative;
     }
@@ -50,22 +48,10 @@
     .owl-item {
         width: 360px !important;
         height: 500px !important;
-        /* Force fixed width */
     }
 
     &.owl-card-slider {
         gap: 10px;
-
-        // .owl-item {
-        //     border-radius: 12px;
-        //     min-height: 360px;
-        //     max-height: 360px;
-        //     min-width: 650px;
-        //     max-width: 650px;
-        //     overflow: hidden;
-        // }
-
-
 
         .slider-card {
             width: 360px;
