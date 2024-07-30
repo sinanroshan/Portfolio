@@ -1,39 +1,64 @@
-//marquee
-document.addEventListener("DOMContentLoaded", function () {
-  const marquee = document.querySelector(".slider");
-  const sliderContent = document.querySelector(".slider-track-rl");
+$(document).ready(function () {
+  const HomeSlider = document.getElementById("slider-home");
+  const sliderDetail = document.getElementById("slider-detail");
+  const aboutPageSlider = document.getElementById("aboutPageSlider");
 
-  //   const clone = sliderContent.cloneNode(true);
-  marquee.appendChild(sliderContent.cloneNode(true));
+  if (HomeSlider) {
+    startScroll(HomeSlider);
+  }
+  if (sliderDetail) {
+    startScroll(sliderDetail);
+  }
+  if (aboutPageSlider) {
+    startScroll(aboutPageSlider);
+  }
 
-  const totalWidth = sliderContent.offsetWidth;
-
-  // Set the width of the marquee container
-  gsap.set(marquee, { width: totalWidth * 2 });
-
-  gsap.to(marquee, {
-    x: -totalWidth - 20,
-    duration: 40,
-    ease: "linear",
-    repeat: -1,
-  });
+  if ($("#cardSlider1")) {
+    $("#cardSlider1").owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: false,
+      autoplay: true,
+      autoplayTimeout: 2000,
+      smartSpeed: 5000,
+      autoplayHoverPause: false,
+      dragEndSpeed: 500,
+    });
+  }
+  if ($("#cardSlider2")) {
+    $("#cardSlider2").owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: false,
+      autoplay: true,
+      autoplayTimeout: 2000,
+      smartSpeed: 5000,
+      autoplayHoverPause: false,
+      dragEndSpeed: 500,
+      rtl: true,
+    });
+  }
 });
 
-function startScroll(slider, sliderContent) {
-  const marquee = document.querySelector(slider);
-  const sliderContent = document.querySelector(sliderContent);
+function startScroll(sliderItem) {
+  if (!sliderItem.children[0]) {
+    return;
+  }
+  const sliderContent = sliderItem.children[0].firstElementChild;
+  var speed = sliderItem.children[0].attributes["speed"].value;
+  var dir = sliderItem.children[0].attributes["dir"].value;
 
-  slider.appendChild(sliderContent.cloneNode(true));
+  sliderItem.children[0].appendChild(sliderContent.cloneNode(true));
 
   const totalWidth = sliderContent.offsetWidth;
 
   // Set the width of the marquee container
-  gsap.set(slider, { width: totalWidth * 2 });
+  gsap.set(sliderItem.children[0], { width: totalWidth * 1.5 });
 
-  gsap.to(slider, {
-    x: -totalWidth - 20,
-    duration: 40,
+  gsap.to(sliderItem.children[0], {
+    x: dir == "ltr" ? -totalWidth - 20 : totalWidth - 20,
+    duration: speed,
     ease: "linear",
-    repeat: -1,
+    repeat: 2,
   });
 }
