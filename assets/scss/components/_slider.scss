@@ -32,42 +32,21 @@
     }
 }
 
+.card-slider-track {
+    display: flex;
+    gap: 16px;
+    white-space: nowrap;
+    position: relative;
 
-// owl
-.owl-carousel {
-    .owl-stage-outer {
-        overflow: hidden;
-        position: relative;
-    }
+    .slider-card {
+        flex: 0 0 auto;
+        width: 400px;
+        height: 500px;
 
-    .owl-stage {
-        display: flex;
-        align-items: center;
-    }
-
-    .owl-item {
-        width: 360px !important;
-        height: 500px !important;
-    }
-
-    &.owl-card-slider {
-        gap: 10px;
-
-        .slider-card {
-            width: 360px;
-            height: 500px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-
-
-            .card-img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
+        .card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
-
     }
 }
