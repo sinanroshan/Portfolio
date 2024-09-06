@@ -77,12 +77,12 @@ function startCardSlider( sliderItem ) {
   } );
 
   // Pause the animation on hover
-  sliderItem.addEventListener( 'mouseenter', () => {
-    animation.pause();
-  } );
+  // sliderItem.addEventListener( 'mouseenter', () => {
+  //   animation.pause();
+  // } );
 
   // Resume the animation when the mouse leaves
-  sliderItem.addEventListener( 'mouseleave', () => {
-    animation.resume();
-  } );
+  // sliderItem.addEventListener( 'mouseleave', () => {
+  //   animation.resume();
+  // } );
 }
