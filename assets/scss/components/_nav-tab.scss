@@ -1,0 +1,40 @@
+.nav-tab-container {
+    position: fixed;
+    top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+
+}
+
+.nav-item-wrapper {
+
+    background-color: var(--white);
+    border-radius: 100px;
+    padding: 8px 16px;
+    display: flex;
+    list-style: none;
+    column-gap: 16px;
+
+    .nav-item {
+        padding: 10px 16px;
+        border-radius: 100px;
+        cursor: pointer;
+
+        &.active,
+        &:hover {
+            background-color: var(--black);
+            transition: all 0.6s;
+
+            .nav-item-link {
+                color: var(--white);
+            }
+        }
+
+        .nav-item-link {
+            color: gray;
+            text-decoration: none;
+        }
+    }
+}

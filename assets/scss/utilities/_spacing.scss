@@ -31,7 +31,7 @@
 @include spacing('ml', 'margin-left', 0, 2, 4, 8, 12, 16, 18, 20, 24, 28, 32, 36, 40, 80);
 
 // Generate CSS classes for column gap
-@include spacing('column-gap', 'column-gap', 0, 4, 8, 12, 16, 80);
+@include spacing('column-gap', 'column-gap', 0, 4, 8, 12, 16, 40, 80);
 
 // Generate CSS classes for row gap
 @include spacing('row-gap', 'row-gap', 0, 4, 8, 12, 16, 80);

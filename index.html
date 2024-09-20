@@ -1,50 +1,276 @@
 <!doctype html>
 <html lang="en" data-theme="theme-dark">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Arshad TP</title>
-    <meta name="theme-color" content="#070707">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Arshad TP</title>
+        <meta name="theme-color" content="#070707">
 
-    <link rel="stylesheet" href="assets/scss/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
 
-</head>
+        <link rel="stylesheet" href="assets/css/main.min.css" as="style"
+            onload="this.onload=null;this.rel='stylesheet'">
 
-<body>
-    <main class="main-wrapper">
-        <section class="landing-section d-flex justify-content-center">
-            <h1 class="main-header">Forem ipsum te</h1>
-        </section>
-        <section class="section-wrapper">
-            <div class="card-wrapper d-flex flex-wrap ros-row-gap-80 ros-column-gap-80">
-                <div class="card">
-                    <img class="card-img" src="/assets/images/Home-card-1.png">
-                    <div class="card-description">
-                        test text
+        <script src="/assets/js/jquery/jquery.min.js"></script>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+
+        <!-- gsap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+
+        <script type="text/javascript" src="/js/index.js"></script>
+        <script type="text/javascript" src="/assets/js/custom/slider.js"></script>
+
+    </head>
+
+    <body class="custom-scroll">
+        <main class="main-wrapper custom-scroll">
+
+            <div class="nav-tab-container">
+                <ul class="nav-item-wrapper">
+                    <li class="nav-item active">
+                        <a class="nav-item-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item-link" href="/portfolio.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item-link" href="/about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+
+            <section class="landing-section d-flex justify-content-center">
+                <div class="landing-bg">
+                    <img class="landing-bg-img" src="/assets/images/landing-image.png">
+                    <video class="landing-bg-video" src="assets/video/landing-loop.mp4" muted autoplay loop
+                        preload="auto"></video>
+                </div>
+                <div class="slider-wrapper main-header" id="slider-home">
+                    <div class="slider" name="Slider Landing" speed="30" dir="rtl">
+                        <div class="slider-track">
+                            <span class="slider-item font-body-x-large ros-pl-32 seprration">Arshad TP</span>
+                            <span class="slider-item font-body-x-large ros-pl-32 seprration">Arshad TP</span>
+                            <span class="slider-item font-body-x-large ros-pl-32 seprration">Arshad TP</span>
+                            <span class="slider-item font-body-x-large ros-pl-32 seprration">Arshad TP</span>
+                            <span class="slider-item font-body-x-large ros-pl-32 seprration">Arshad TP</span>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-description">
-                        test text
+            </section>
+            <section class="section-wrapper ros-mt-80">
+                <div
+                    class="card-wrapper card-wrapper-home d-flex flex-wrap ros-row-gap-80 ros-column-gap-80 justify-content-between">
+                    <div class="card">
+                        <div class="card-content" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
+                            <img class="card-img" src="/assets/images/home/1-thumbnail.jpg">
+                            <iframe class="card-video cursor-pointer"
+                                src="https://player.vimeo.com/video/1006483626?loop=1&muted=1&controls=1&autoplay=0&byline=0&portrait=0"
+                                frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                title="Rebranding video for Aufait Technologies"></iframe>
+                        </div>
+                        <div class="card-description">
+                            <div class="font-title-medium font-weight-500">Aufait UX Showreel</div>
+                            <div class="d-flex ros-column-gap-16 ros-mt-12">
+                                <div class="badge">Blender</div>
+                                <div class="badge">After Effects</div>
+                                <div class="badge">Premier Pro</div>
+                            </div>
+                        </div>
                     </div>
-                    <img class="card-img" src="/assets/images/Home-card-2.png">
+                    <div class="card">
+                        <div class="card-description">
+                            <div class="font-title-medium font-weight-500">3D Mograph - UX India 2023</div>
+                            <div class="d-flex ros-column-gap-16 ros-mt-12">
+                                <div class="badge">Blender</div>
+                                <div class="badge">After Effects</div>
+                                <div class="badge">Premier Pro</div>
+                            </div>
+                        </div>
+                        <div class="card-content" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
+                            <img class="card-img" src="/assets/images/home/2-thumbnail.jpg">
+                            <iframe class="card-video"
+                                src="https://player.vimeo.com/video/1006830060?loop=1&muted=1&controls=1&autoplay=0&byline=0&portrait=0"
+                                frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                title="3D Explainer Video"></iframe>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
+                            <img class="card-img" src="/assets/images/home/3-thumbnail.png">
+                            <iframe class="card-video"
+                                src="https://player.vimeo.com/video/1006828928?loop=1&muted=1&controls=1&autoplay=0&byline=0&portrait=0"
+                                allow="autoplay; fullscreen; picture-in-picture" allowfullscreen frameborder="0"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                        </div>
+                        <div class="card-description">
+                            <div class="font-title-medium font-weight-500">3D Explainer Video</div>
+                            <div class="d-flex ros-column-gap-16 ros-mt-12">
+                                <div class="badge">Blender</div>
+                                <div class="badge">After Effects</div>
+                                <div class="badge">Premier Pro</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-description">
+                            <div class="font-title-medium font-weight-500">Project Reel</div>
+                            <div class="d-flex ros-column-gap-16 ros-mt-12">
+                                <div class="badge">Blender</div>
+                                <div class="badge">After Effects</div>
+                                <div class="badge">Premier Pro</div>
+                            </div>
+                        </div>
+                        <div class="card-content" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
+                            <img class="card-img" src="/assets/images/home/4-thumbnail.png">
+
+                            <iframe class="card-video"
+                                src="https://player.vimeo.com/video/1006830186?loop=1&muted=1&controls=1&autoplay=0&byline=0&portrait=0"
+                                frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                title="2D &amp; 3D Motion Graphics - Showreel for Aufait UX"></iframe>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <img class="card-img" src="/assets/images/Home-card-3.png">
-                    <div class="card-description">
-                        test text
-                    </div>
+                <div class="d-flex justify-content-center ros-mt-80 ros-mb-80">
+                    <button class="border-btn" onclick="redirectToPortfolio()">More Works</button>
                 </div>
-                <div class="card">
-                    <div class="card-description">
-                        test text
-                    </div>
-                    <img class="card-img" src="/assets/images/Home-card-4.png">
+            </section>
+
+            <section class="section-wrapper">
+                <p class="font-body-large ros-mb-80">Passionate about motion design, I aim to create captivating visual
+                    experiences through lively animations and compelling motion graphics. With a keen eye for detail and
+                    a
+                    dedication to pushing creative boundaries, I strive to deliver impactful and memorable storytelling
+                    through the art of motion design.</p>
+            </section>
+
+            <div class="card-slider-track ros-mt-80" name="card slider2" speed="30" id="cardSlider2" dir="rtl">
+                <div class="slider-card">
+                    <img class="card-img" src="/assets/images/slider-cards/dig art 1.jpg">
+                </div>
+                <div class="slider-card">
+                    <img class="card-img" src="/assets/images/slider-cards/dig art 2.jpg">
+                </div>
+                <div class="slider-card">
+                    <img class="card-img" src="/assets/images/slider-cards/dig art 3.jpg">
+                </div>
+                <div class="slider-card">
+                    <img class="card-img" src="/assets/images/slider-cards/dig art 4.jpg">
+                </div>
+                <div class="slider-card">
+                    <img class="card-img" src="/assets/images/slider-cards/Bottle 1.jpg">
+                </div>
+                <div class="slider-card">
+                    <img class="card-img" src="/assets/images/slider-cards/Bottle 2.jpg">
+                </div>
+                <div class="slider-card">
+                    <img class="card-img" src="/assets/images/slider-cards/Bottle 3.jpg">
+                </div>
+                <div class="slider-card">
+                    <img class="card-img" src="/assets/images/slider-cards/Bottle 4.jpg">
+                </div>
+                <div class="slider-card">
+                    <img class="card-img" src="/assets/images/slider-cards/dig art 5.jpg">
+                </div>
+                <div class="slider-card">
+                    <img class="card-img" src="/assets/images/slider-cards/dig art 6.jpg">
+                </div>
+                <div class="slider-card">
+                    <img class="card-img" src="/assets/images/slider-cards/dig art 7.jpg">
+                </div>
+                <div class="slider-card">
+                    <img class="card-img" src="/assets/images/slider-cards/dig art 8.jpg">
+                </div>
+                <div class="slider-card">
+                    <img class="card-img" src="/assets/images/slider-cards/dig art 9.jpg">
+                </div>
+                <div class="slider-card">
+                    <img class="card-img" src="/assets/images/slider-cards/dig art 10.jpg">
+                </div>
+                <div class="slider-card">
+                    <img class="card-img" src="/assets/images/slider-cards/dig art 11.jpg">
+                </div>
+                <div class="slider-card">
+                    <img class="card-img" src="/assets/images/slider-cards/dig art 12.jpg">
+                </div>
+                <div class="slider-card">
+                    <img class="card-img" src="/assets/images/slider-cards/dig art 13.jpg">
+                </div>
+                <div class="slider-card">
+                    <img class="card-img" src="/assets/images/slider-cards/dig art 14.jpg">
+                </div>
+                <div class="slider-card">
+                    <img class="card-img" src="/assets/images/slider-cards/dig art 15.jpg">
+                </div>
+                <div class="slider-card">
+                    <img class="card-img" src="/assets/images/slider-cards/dig art 16.jpg">
+                </div>
+                <div class="slider-card">
+                    <img class="card-img" src="/assets/images/slider-cards/dig art 17.jpg">
                 </div>
             </div>
-        </section>
-    </main>
-</body>
+
+            <div class="slider-wrapper" id="slider-detail">
+                <div class="slider" name="Details slider" speed="30" dir="ltr">
+                    <div class="slider-track">
+                        <span class="slider-item font-body-x-large ros-pl-32 seprration">2D/3D Motion Designer</span>
+                        <span class="slider-item font-body-x-large ros-pl-32 seprration">Graphic Design</span>
+                        <span class="slider-item font-body-x-large ros-pl-32 seprration">Digital Art</span>
+                        <span class="slider-item font-body-x-large ros-pl-32 seprration">Concept Art</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <section class="section-wrapper section-footer ros-pt-80 ros-pb-80">
+                <diV class="footer-content-container">
+                    <div class="sub-section">
+                        <!-- <span class="font-body-medium d-flex align-items-center ros-mb-40">
+                            TP Arshad
+                        </span> -->
+                        <a class="pill font-body-small font-color-secondary" href="mailto:arshadtp51@gmail.com"
+                            target="_blank">arshadtp51@gmail.com</a>
+                        <div class="d-flex ros-column-gap-12 ros-mt-40">
+                            <a class="footer-icons" href="https://www.instagram.com/arshad_tp/" target="_blank">
+                                <img src="assets/icons/instagram.png" alt="instagram logo">
+                            </a>
+                            <a class="footer-icons"
+                                href="https://www.linkedin.com/in/arshad-t-p-2b241a213?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                target="_blank">
+                                <img src="assets/icons/LinkedIn.png" alt="LinkedIn logo">
+                            </a>
+                            <a class="footer-icons" href="https://www.behance.net/arshadtp/" target="_blank">
+                                <img src="assets/icons/behance.png" alt="behance logo">
+                            </a>
+                            <a class="footer-icons" href="https://www.artstation.com/arshadtp51" target="_blank">
+                                <img src="assets/icons/artstation.png" alt="artstation logo">
+                            </a>
+                            <a class="footer-icons" href="https://foundation.app/@arshadtp" target="_blank">
+                                <img src="assets/icons/foundation.png" alt="foundation logo">
+                            </a>
+                        </div>
+                    </diV>
+                    <div class="sub-section align-items-center d-flex">
+                        <div class="footer-text">Let's Work together </div>
+                    </div>
+                </diV>
+                <!-- <div class="footer-bottom d-flex justify-content-between ros-pt-40 ros-pb-40">
+                    <div class="font-body-normal">© 2023 Maxwell Inc. All rights reserved.</div>
+                    <div class="d-flex ros-column-gap-40 justify-content-end">
+                        <div class="font-body-normal">Terms of Service</div>
+                        <div class="font-body-normal">Privacy Policy</div>
+                        <div class="font-body-normal">Cookies</div>
+                    </div>
+                </div> -->
+            </section>
+        </main>
+    </body>
 
 </html>
