@@ -6,8 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Arshad TP</title>
         <meta name="theme-color" content="#070707">
-        <script src="https://player.vimeo.com/api/player.js"></script>
-        <script type="text/javascript" src="/js/index.js"></script>
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
@@ -16,6 +15,16 @@
 
         <link rel="stylesheet" href="assets/css/main.min.css" as="style"
             onload="this.onload=null;this.rel='stylesheet'">
+
+        <script src="/assets/js/jquery/jquery.min.js"></script>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+
+        <!-- gsap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+
+        <script type="text/javascript" src="/js/index.js"></script>
+        <script type="text/javascript" src="/assets/js/custom/slider.js"></script>
+
     </head>
 
     <body class="custom-scroll">
@@ -230,8 +239,19 @@
                 </div>
             </section>
 
+            <div class="slider-wrapper" id="slider-detail">
+                <div class="slider" name="Details slider" speed="30" dir="ltr">
+                    <div class="slider-track">
+                        <span class="slider-item font-body-x-large ros-pl-32 seprration">2D/3D Motion Designer</span>
+                        <span class="slider-item font-body-x-large ros-pl-32 seprration">Graphic Design</span>
+                        <span class="slider-item font-body-x-large ros-pl-32 seprration">Digital Art</span>
+                        <span class="slider-item font-body-x-large ros-pl-32 seprration">Concept Art</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- footer -->
-            <section class="section-wrapper section-footer ros-pt-80 v">
+            <section class="section-wrapper section-footer ros-pt-80 ros-pb-80 ">
                 <diV class="footer-content-container">
                     <div class="sub-section">
                         <a class="pill font-body-small font-color-secondary" href="mailto:arshadtp51@gmail.com"
