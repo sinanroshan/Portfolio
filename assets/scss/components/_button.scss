@@ -13,5 +13,31 @@
     &:hover {
         background-color: var(--white);
         color: var(--text-tertiary);
+        transition: all 0.8s;
+
+        svg {
+            transition: all 0.8s;
+
+            * {
+                fill: var(--text-tertiary);
+                transition: all 0.8s;
+            }
+        }
     }
+}
+
+.btn-resume {
+    position: absolute;
+    right: 16px;
+    top: 30px;
+    z-index: 1012;
+    gap: 6px;
+
+    // &:hover {
+    //     svg {
+    //         * {
+    //             fill: var(--text-tertiary);
+    //         }
+    //     }
+    // }
 }
