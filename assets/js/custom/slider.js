@@ -61,7 +61,7 @@ function startCardSlider( sliderItem ) {
     }
   } );
 
-  const totalTrackWidth = sliderItem.offsetWidth * 1.8;
+  const totalTrackWidth = sliderItem.offsetWidth * 3.5;
   gsap.set( sliderItem, { width: totalTrackWidth } );
 
   const distance = dir === 'ltr' ? -sliderItem.offsetWidth : sliderItem.offsetWidth;
