@@ -30,6 +30,7 @@
       }
     }
   }
+
   @include mq(phone, min) {
     @for $i from 1 through $grid-columns {
       .row-col-sm-#{$i} {
@@ -47,22 +48,6 @@
       }
     }
   }
-
-  // @for $i from 1 through  $grid-columns {
-  //   .row-col-#{$i} {
-  //     flex: 0 0 calc((100% / 12) * #{$i} - var(--row-gutter));
-  //     max-width: calc((100% / 12) * #{$i} - var(--row-gutter));
-  //   }
-  // }
-
-  // @for $i from 1 through  $grid-columns {
-  //   &-cols-#{$i} {
-  //     .row-col {
-  //       flex: 0 0 auto;
-  //       width: calc((100% / #{$i}) - var(--row-gutter));
-  //     }
-  //   }
-  // }
 
   &.row-gutter-8 {
     --row-gutter: 8px;
