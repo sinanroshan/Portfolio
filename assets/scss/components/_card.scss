@@ -35,8 +35,9 @@
         }
 
         .card {
-            width: calc((100% - 80px)/2);
-
+            @include mq(tablet, min) {
+                width: calc((100% - 80px)/2);
+            }
 
 
             &:nth-child(odd) .card-img {
