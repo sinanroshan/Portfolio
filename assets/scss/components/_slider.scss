@@ -28,6 +28,22 @@
             scale: .5;
             position: relative;
             bottom: -45px;
+
+
+
+            @include mq(phone) {
+                width: 220px;
+                height: 220px;
+                scale: .2;
+                bottom: -91px;
+                margin-left: 16px;
+            }
+        }
+
+        &.ros-pl-32 {
+            @include mq(phone) {
+                padding-left: 0px !important;
+            }
         }
     }
 }
@@ -38,10 +54,19 @@
     white-space: nowrap;
     position: relative;
 
+    @include mq(phone) {
+        gap: 8px
+    }
+
     .slider-card {
         flex: 0 0 auto;
         width: 400px;
         height: 500px;
+
+        @include mq(phone) {
+            width: calc((100vw - 64px)/3);
+            height: calc((100vw - 130px)/2);
+        }
 
         .card-img {
             width: 100%;

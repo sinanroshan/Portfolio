@@ -3,4 +3,9 @@
     border-radius: 50px;
     border: 1px solid #FFFFFF;
     font-size: rem(13);
+
+    @include mq(phone) {
+        font-size: rem(11);
+        padding: 6px 8px;
+    }
 }

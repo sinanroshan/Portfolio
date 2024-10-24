@@ -18,10 +18,21 @@
                 width: calc(100vw - 64px);
                 max-width: calc(100vw - 64px);
                 overflow: hidden;
+
+                + .card {
+                    margin-top: 40px;
+                }
             }
 
             &:nth-child(odd) .card-img {
                 margin-bottom: 16px;
+            }
+
+            &:nth-child(even) {
+                @include mq(phone) {
+                    display: flex;
+                    flex-direction: column-reverse;
+                }
             }
 
             &:nth-child(even) .card-img {
