@@ -8,4 +8,10 @@
     .experience-detail-wrapper {
         max-width: 60%;
     }
+
+    @include mq(phone) {
+        flex-direction: column;
+        gap: 18px;
+        margin: 80px 0;
+    }
 }
