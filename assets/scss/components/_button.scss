@@ -33,11 +33,7 @@
     z-index: 1012;
     gap: 6px;
 
-    // &:hover {
-    //     svg {
-    //         * {
-    //             fill: var(--text-tertiary);
-    //         }
-    //     }
-    // }
+    @include mq(phone) {
+        display: none;
+    }
 }

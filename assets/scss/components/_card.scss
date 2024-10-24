@@ -1,9 +1,32 @@
+.card {
+    @include mq(phone) {
+        width: calc(100vw - 64px);
+        max-width: calc(100vw - 64px);
+        overflow: hidden;
+
+        + .card {
+            margin-top: 40px;
+        }
+    }
+}
+
 .card-wrapper {
 
     &.card-col-3 {
-        .card {
-            width: calc((100% - 90px)/3);
+        @include mq(tablet, min) {
+            width: calc(100vw - 64px);
+            max-width: calc(100vw - 64px);
+            overflow: hidden;
+
+            + .card {
+                margin-top: 40px;
+            }
+
+            .card {
+                width: calc((100% - 90px)/3);
+            }
         }
+
     }
 
     &.card-wrapper-home {
@@ -14,15 +37,7 @@
         .card {
             width: calc((100% - 80px)/2);
 
-            @include mq(phone) {
-                width: calc(100vw - 64px);
-                max-width: calc(100vw - 64px);
-                overflow: hidden;
 
-                + .card {
-                    margin-top: 40px;
-                }
-            }
 
             &:nth-child(odd) .card-img {
                 margin-bottom: 16px;
