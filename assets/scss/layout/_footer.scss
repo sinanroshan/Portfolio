@@ -1,8 +1,15 @@
 .footer-content-container {
     display: flex;
 
+    @include mq(phone) {
+        flex-direction: column-reverse;
+        row-gap: 40px;
+    }
+
     .sub-section {
-        width: 50%;
+        @include mq(tablet, min) {
+            width: 50%;
+        }
     }
 
     .footer-text {
