@@ -13,9 +13,9 @@ $( document ).ready( function () {
     startScroll( aboutPageSlider );
   }
 
-  if ( document.getElementById( "cardSlider1" ) ) {
-    startCardSlider( document.getElementById( "cardSlider1" ) );
-  }
+  // if ( document.getElementById( "cardSlider1" ) ) {
+  //   startCardSlider( document.getElementById( "cardSlider1" ) );
+  // }
 
   if ( document.getElementById( "cardSlider2" ) ) {
     startCardSlider( document.getElementById( "cardSlider2" ) );
@@ -55,13 +55,13 @@ function startCardSlider( sliderItem ) {
   sliderCards.forEach( ( card ) => {
     const clonedCard = card.cloneNode( true );
     if ( dir === 'rtl' ) {
-      sliderItem.insertBefore( clonedCard, sliderItem.firstChild );
-    } else {
       sliderItem.appendChild( clonedCard );
+    } else {
+      sliderItem.insertBefore( clonedCard, sliderItem.firstChild );
     }
   } );
 
-  const totalTrackWidth = sliderItem.offsetWidth * 3.5;
+  const totalTrackWidth = sliderItem.offsetWidth * 4.5;
   gsap.set( sliderItem, { width: totalTrackWidth } );
 
   const distance = dir === 'ltr' ? -sliderItem.offsetWidth : sliderItem.offsetWidth;
@@ -77,12 +77,12 @@ function startCardSlider( sliderItem ) {
   } );
 
   // Pause the animation on hover
-  // sliderItem.addEventListener( 'mouseenter', () => {
-  //   animation.pause();
-  // } );
+  sliderItem.addEventListener( 'mouseenter', () => {
+    animation.pause();
+  } );
 
   // Resume the animation when the mouse leaves
-  // sliderItem.addEventListener( 'mouseleave', () => {
-  //   animation.resume();
-  // } );
+  sliderItem.addEventListener( 'mouseleave', () => {
+    animation.resume();
+  } );
 }

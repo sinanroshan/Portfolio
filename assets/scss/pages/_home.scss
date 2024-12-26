@@ -21,7 +21,6 @@
 
     @include mq(phone) {
         padding: 0 32px;
-
     }
 
 }
@@ -29,6 +28,10 @@
 .landing-section {
     height: 100vh;
     position: relative;
+
+    @include mq(phone) {
+        height: 70vh;
+    }
 
     .main-header {
         bottom: 10px;
@@ -39,6 +42,10 @@
         object-fit: cover;
         width: 100vw;
         height: 100vh;
+
+        @include mq(phone) {
+            height: 70vh;
+        }
     }
 
     .landing-bg-video {
