@@ -12,9 +12,6 @@
 }
 
 .slider-item {
-    flex: 0 0 auto;
-    text-align: center;
-
     &.seprration {
         &::after {
             content: "";
@@ -34,9 +31,9 @@
             @include mq(phone) {
                 width: 220px;
                 height: 220px;
-                scale: .2;
-                bottom: -91px;
-                margin-left: 16px;
+                scale: .3;
+                bottom: -90px;
+                margin-left: 8px;
             }
         }
 
@@ -73,5 +70,20 @@
             height: 100%;
             object-fit: cover;
         }
+    }
+
+    .slider-card.clone {
+        opacity: 0.5; // Example for debugging, adjust as needed
+        pointer-events: none; // Prevent interactions with cloned elements
+    }
+
+    .slider-card {
+        transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+    }
+}
+
+.ros-pl-80 {
+    @include mq(phone) {
+        padding-left: 0px !important;
     }
 }
