@@ -14,8 +14,6 @@
 
     &.card-col-3 {
         @include mq(tablet, min) {
-            width: calc(100vw - 64px);
-            max-width: calc(100vw - 64px);
             overflow: hidden;
 
             + .card {
