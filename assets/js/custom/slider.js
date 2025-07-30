@@ -1,88 +1,99 @@
-$( document ).ready( function () {
-  const HomeSlider = document.getElementById( "slider-home" );
-  const sliderDetail = document.getElementById( "slider-detail" );
-  const aboutPageSlider = document.getElementById( "aboutPageSlider" );
+$(document).ready(function () {
+  const HomeSlider = document.getElementById("slider-home");
+  const sliderDetail = document.getElementById("slider-detail");
+  const aboutPageSlider = document.getElementById("aboutPageSlider");
 
-  if ( HomeSlider ) {
-    startScroll( HomeSlider );
+  if (HomeSlider) {
+    startScroll(HomeSlider);
   }
-  if ( sliderDetail ) {
-    startScroll( sliderDetail );
+  if (sliderDetail) {
+    startScroll(sliderDetail);
   }
-  if ( aboutPageSlider ) {
-    startScroll( aboutPageSlider );
+  if (aboutPageSlider) {
+    startScroll(aboutPageSlider);
   }
 
   // if ( document.getElementById( "cardSlider1" ) ) {
   //   startCardSlider( document.getElementById( "cardSlider1" ) );
   // }
 
-  if ( document.getElementById( "cardSlider2" ) ) {
-    startCardSlider( document.getElementById( "cardSlider2" ) );
+  if (document.getElementById("cardSlider2")) {
+    startCardSlider(document.getElementById("cardSlider2"));
   }
 
-} );
+});
 
-function startScroll( sliderItem ) {
-  if ( !sliderItem.children[ 0 ] ) {
+function startScroll(sliderItem) {
+  if (!sliderItem.children[0]) {
     return;
   }
-  const sliderContent = sliderItem.children[ 0 ].firstElementChild;
-  var speed = sliderItem.children[ 0 ].attributes[ "speed" ].value;
-  var dir = sliderItem.children[ 0 ].attributes[ "dir" ].value;
+  const sliderContent = sliderItem.children[0].firstElementChild;
+  var speed = sliderItem.children[0].attributes["speed"].value;
+  var dir = sliderItem.children[0].attributes["dir"].value;
 
-  sliderItem.children[ 0 ].appendChild( sliderContent.cloneNode( true ) );
+  sliderItem.children[0].appendChild(sliderContent.cloneNode(true));
 
   const totalWidth = sliderContent.offsetWidth;
 
   // Set the width of the marquee container
-  gsap.set( sliderItem.children[ 0 ], { width: totalWidth * 1.5 } );
+  gsap.set(sliderItem.children[0], { width: totalWidth * 1.5 });
 
-  gsap.to( sliderItem.children[ 0 ], {
+  gsap.to(sliderItem.children[0], {
     x: dir == "ltr" ? -totalWidth - 20 : totalWidth - 20,
     duration: speed,
     ease: "linear",
     repeat: 2,
-  } );
+  });
 }
-function startCardSlider( sliderItem ) {
-  const speed = Number( sliderItem.getAttribute( 'speed' ) );
-  const dir = sliderItem.getAttribute( 'dir' );
+function startCardSlider(sliderItem) {
+  if (!sliderItem) return;
 
-  const sliderCards = sliderItem.querySelectorAll( '.slider-card' );
+  const speed = Number(sliderItem.getAttribute('speed')) || 30;
+  const dir = sliderItem.getAttribute('dir') || 'rtl';
 
-  // Clone cards
-  sliderCards.forEach( ( card ) => {
-    const clonedCard = card.cloneNode( true );
-    if ( dir === 'rtl' ) {
-      sliderItem.appendChild( clonedCard );
-    } else {
-      sliderItem.insertBefore( clonedCard, sliderItem.firstChild );
-    }
-  } );
+  // Remove previous clones
+  sliderItem.querySelectorAll('.slider-card.clone').forEach(el => el.remove());
 
-  const totalTrackWidth = sliderItem.offsetWidth * 4.5;
-  gsap.set( sliderItem, { width: totalTrackWidth } );
+  // Get all original cards
+  const cards = Array.from(sliderItem.querySelectorAll('.slider-card:not(.clone)'));
+  if (cards.length === 0) return;
 
-  const distance = dir === 'ltr' ? -sliderItem.offsetWidth : sliderItem.offsetWidth;
+  // Calculate total width of one set
+  let totalWidth = 0;
+  cards.forEach(card => {
+    totalWidth += card.offsetWidth;
+  });
 
-  const animation = gsap.to( sliderItem, {
-    x: distance,
+  // Clone cards for seamless loop
+  cards.forEach(card => {
+    const clone = card.cloneNode(true);
+    clone.classList.add('clone');
+    sliderItem.appendChild(clone);
+  });
+
+  // Remove any previous GSAP animations
+  gsap.killTweensOf(sliderItem);
+
+  // Set width for the slider track
+  gsap.set(sliderItem, { x: 0, width: totalWidth * 2 });
+
+  // Animate for infinite ribbon loop using modifiers
+  gsap.to(sliderItem, {
+    x: dir === 'rtl' ? -totalWidth : totalWidth,
     duration: speed,
-    ease: 'linear',
+    ease: 'none',
     repeat: -1,
     modifiers: {
-      x: gsap.utils.unitize( ( x ) => x % sliderItem.offsetWidth ),
-    },
-  } );
-
-  // Pause the animation on hover
-  sliderItem.addEventListener( 'mouseenter', () => {
-    animation.pause();
-  } );
-
-  // Resume the animation when the mouse leaves
-  sliderItem.addEventListener( 'mouseleave', () => {
-    animation.resume();
-  } );
+      x: function (x) {
+        // Wrap the x value for a seamless loop
+        let val = parseFloat(x);
+        if (dir === 'rtl') {
+          if (val <= -totalWidth) val += totalWidth;
+        } else {
+          if (val >= totalWidth) val -= totalWidth;
+        }
+        return `${val}px`;
+      }
+    }
+  });
 }
