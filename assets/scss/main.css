@@ -1726,7 +1726,10 @@ a:not([class]) {
 }
 
 .nav-item-wrapper {
-  background-color: var(--white);
+  background-color: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  mix-blend-mode: difference;
   border-radius: 100px;
   padding: 8px 16px;
   display: flex;
