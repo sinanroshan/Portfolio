@@ -5,12 +5,14 @@
     display: flex;
     justify-content: center;
     z-index: 999;
-
 }
 
 .nav-item-wrapper {
-
-    background-color: var(--white);
+    // Invert color based on background using mix-blend-mode and a semi-transparent overlay
+    background-color: rgba(255,255,255,0.18);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    mix-blend-mode: difference;
     border-radius: 100px;
     padding: 8px 16px;
     display: flex;
