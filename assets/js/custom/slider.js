@@ -46,43 +46,54 @@ function startScroll(sliderItem) {
   });
 }
 function startCardSlider(sliderItem) {
-  const speed = Number(sliderItem.getAttribute('speed'));
-  const dir = sliderItem.getAttribute('dir');
+  if (!sliderItem) return;
 
-  const sliderCards = sliderItem.querySelectorAll('.slider-card');
+  const speed = Number(sliderItem.getAttribute('speed')) || 30;
+  const dir = sliderItem.getAttribute('dir') || 'rtl';
 
-  // Clone cards
-  sliderCards.forEach((card) => {
-    const clonedCard = card.cloneNode(true);
-    if (dir === 'rtl') {
-      sliderItem.appendChild(clonedCard);
-    } else {
-      sliderItem.insertBefore(clonedCard, sliderItem.firstChild);
-    }
+  // Remove previous clones
+  sliderItem.querySelectorAll('.slider-card.clone').forEach(el => el.remove());
+
+  // Get all original cards
+  const cards = Array.from(sliderItem.querySelectorAll('.slider-card:not(.clone)'));
+  if (cards.length === 0) return;
+
+  // Calculate total width of one set
+  let totalWidth = 0;
+  cards.forEach(card => {
+    totalWidth += card.offsetWidth;
   });
 
-  const totalTrackWidth = sliderItem.offsetWidth * 4.5;
-  gsap.set(sliderItem, { width: totalTrackWidth });
+  // Clone cards for seamless loop
+  cards.forEach(card => {
+    const clone = card.cloneNode(true);
+    clone.classList.add('clone');
+    sliderItem.appendChild(clone);
+  });
 
-  const distance = dir === 'ltr' ? -sliderItem.offsetWidth : sliderItem.offsetWidth;
+  // Remove any previous GSAP animations
+  gsap.killTweensOf(sliderItem);
 
-  const animation = gsap.to(sliderItem, {
-    x: distance,
+  // Set width for the slider track
+  gsap.set(sliderItem, { x: 0, width: totalWidth * 2 });
+
+  // Animate for infinite ribbon loop using modifiers
+  gsap.to(sliderItem, {
+    x: dir === 'rtl' ? -totalWidth : totalWidth,
     duration: speed,
-    ease: 'linear',
+    ease: 'none',
     repeat: -1,
     modifiers: {
-      x: gsap.utils.unitize((x) => x % sliderItem.offsetWidth),
-    },
+      x: function (x) {
+        // Wrap the x value for a seamless loop
+        let val = parseFloat(x);
+        if (dir === 'rtl') {
+          if (val <= -totalWidth) val += totalWidth;
+        } else {
+          if (val >= totalWidth) val -= totalWidth;
+        }
+        return `${val}px`;
+      }
+    }
   });
-
-  // Pause the animation on hover
-  // sliderItem.addEventListener( 'mouseenter', () => {
-  //   animation.pause();
-  // } );
-
-  // // Resume the animation when the mouse leaves
-  // sliderItem.addEventListener( 'mouseleave', () => {
-  //   animation.resume();
-  // } );
 }
